@@ -1,0 +1,9 @@
+services:
+    awaresoft.file.block.file:
+        class: Awaresoft\FileBundle\Block\FileBlock
+        tags:
+            - { name: sonata.block }
+        arguments:
+            - File
+            - @templating
+            - @service_container

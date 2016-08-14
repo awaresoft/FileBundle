@@ -1,0 +1,12 @@
+services:
+    awaresoft.file.admin.file:
+        class: Awaresoft\FileBundle\Admin\FileAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin.admin.menu_group_content, label: file.admin.menu.files }
+        arguments:
+            - null
+            - Awaresoft\FileBundle\Entity\File
+            - AwaresoftFileBundle:FileCRUD
+            - "@service_container"
+        calls:
+            - [setTemplate, [tree, AwaresoftFileBundle:CRUD:tree.html.twig]]

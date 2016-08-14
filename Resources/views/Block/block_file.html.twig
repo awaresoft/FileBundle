@@ -1,0 +1,18 @@
+{% extends sonata_block.templates.block_base %}
+
+{% block block %}
+    {% if header %}
+        <h4>{{ header }}</h4>
+    {% endif %}
+    <div class="downloadFile">
+        {% if file %}
+            {%- set size = file.media.size %}
+            {%- set contentType = file.media | split('.') %}
+            <a href="{{ path('sonata_media_show', {'media': file.media.id}) }}" target="_blank">
+                {{ file.name }}<br />
+                <small class="type">{{ contentType[(contentType | length) - 1] }}</small>
+                <small class="size">{%- if size > 1000000 %}{{ (size / 1000000) | round(2) }}MB{%- else %}{{ (size / 1000) | round(1) }}KB{% endif %}</small>
+             </a>
+        {% endif %}
+    </div>
+{% endblock %}

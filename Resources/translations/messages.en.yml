@@ -1,0 +1,7 @@
+file:
+    block:
+        help:
+            file_header_block: Please fill this field, if you want header above file.
+    admin:
+        menu:
+            files: Files

@@ -1,0 +1,7 @@
+file:
+    block:
+        help:
+            file_header_block: Uzupełnij to pole, jeżeli chcesz aby nad plikiem do pobrania znalazł się tytuł.
+    admin:
+        menu:
+            files: Pliki
