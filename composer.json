@@ -1,5 +1,5 @@
 {
-    "name": "awaresoft/FileBundle",
+    "name": "awaresoft/file-bundle",
     "type": "symfony-bundle",
     "description": "Symfony Awaresoft FileBundle with Sonata libraries",
     "require": {
